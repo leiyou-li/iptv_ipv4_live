@@ -1,8 +1,8 @@
-name: 过滤 IPV4 地址并检测链接有效性
+name: 过滤 IPV4 地址
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # 每隔6小时运行一次
+    - cron: '0 */4 * * *'  # 每隔4小时运行一次
   workflow_dispatch:  # 允许手动触发
 
 permissions:
@@ -26,9 +26,6 @@ jobs:
 
     - name: 运行过滤脚本
       run: python script.py
-
-    - name: 检测链接有效性
-      run: python check_links.py
 
     - name: 如果有更改则提交并推送
       run: |
