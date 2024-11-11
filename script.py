@@ -1,3 +1,4 @@
+import requests
 
 def fetch_and_filter():
     url = 'https://raw.githubusercontent.com/leiyou-li/AutoIPTV/refs/heads/master/output/result.txt'
